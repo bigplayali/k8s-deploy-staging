@@ -43,8 +43,8 @@ pipeline {
         }
       }
     }
-    // DO NOT uncomment until 06_04 Lab
-    /*
+    // DO NOT uncomment until 06_04 Lab 
+
     stage('DT Deploy Event') {
       steps {
         container("curl") {
@@ -61,10 +61,10 @@ pipeline {
         }
       }
     }
-    */
+
     
     // DO NOT uncomment until 10_01 Lab
-    /*
+    
     stage('Staging Warm Up') {
       steps {
         echo "Waiting for the service to start..."
@@ -135,7 +135,7 @@ pipeline {
           }
         }
         //sleeping to allow data to arrive in Dynatrace
-        sleep 60
+        sleep 120
         perfSigDynatraceReports(
           envId: 'Dynatrace Tenant', 
           nonFunctionalFailure: 2, 
@@ -143,6 +143,6 @@ pipeline {
         )
       }
     }
-    */
+    
   }
 }
